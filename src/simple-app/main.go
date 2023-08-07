@@ -99,7 +99,7 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// Routes
-	e.POST("/", func(c echo.Context) error {
+	e.GET("/", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, "Welcome to the API!")
 	})
 	e.POST("/users", createUser)

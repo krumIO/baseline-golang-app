@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  baseline-api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+    restart: on-failure:10
+    # command: air
+    ports:
+      - '1323:1323' # map: local:container
+    # restart: always # Restarts the service whenever any defined configuration changes
+    volumes:
+      - .:/app

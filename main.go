@@ -51,6 +51,7 @@ func createUser(c echo.Context) error {
 //
 //	200: userResp
 //	404: errorResp
+
 func getUser(c echo.Context) error {
 	id, _ := strconv.Atoi(c.Param("id"))
 	return c.JSON(http.StatusOK, users[id])

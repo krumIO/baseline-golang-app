@@ -21,3 +21,5 @@ docker run -d --name baseline-golang-app-prod -p 1323:1323 baseline-golang-app:p
 curl http://localhost:1323
 ```
 
+test
+
